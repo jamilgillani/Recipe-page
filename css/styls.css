@@ -1,0 +1,162 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Outfit', sans-serif;
+    color: hsl(30, 10%, 34%);
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  
+
+  .recipe__page {
+    /* margin-top: 1rem; */
+    /* padding: 2rem; */
+    background-color: white;
+  }
+
+  .recipe-content {
+    padding: 2rem;
+  }
+
+  .recipe__title {
+    font: 700 1.65rem 'Young Serif', sans-serif;
+    color: hsl(24, 5%, 18%);
+  }
+
+   .recipe__page > * + * {
+    margin-top: 1rem;   
+    }
+
+    .recipe__section {
+        background-color: hsl(330, 100%, 98%);
+        padding: 2rem;
+        line-height: 1.5;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 1rem;
+    }
+
+    .recipe__section_Preparation {
+      color: hsl(332, 51%, 32%);
+      margin-bottom: 0.5rem;
+    }
+
+    .recipe__time {
+        list-style-type: circle;
+    }
+
+    ul > * + * {
+        margin-top: 0.5rem;
+    }
+
+    .recipe__section-title {
+        font: 400 2rem 'Young Serif', sans-serif;
+        color: hsl(14, 45%, 36%);
+    }
+
+    .global_color {
+        color: hsl(30, 10%, 34%);
+    }
+    
+    .recipe__instructions > * + * {
+        margin-top: 1rem;
+    }
+
+    .recipe__divider {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    li::marker {
+      color: hsl(14, 45%, 36%);
+    }
+
+    .recipe__table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+  
+    .recipe__table th {
+        font: 700 1rem 'Young Serif', sans-serif;
+        color: hsl(14, 45%, 36%);
+        /* text-align: left; */
+        padding: 0.5rem; 
+        border-bottom: 1px solid hsl(0, 0%, 29%);
+    }
+
+    .recipe__table td {
+        padding: 0.5rem;
+        border-bottom: 1px solid hsl(0, 0%, 29%);
+    }
+
+    .recipe__table tr:nth-last-child(1) td {
+        border-bottom: none;
+    }
+
+    .recipe__table tr:nth-last-child(1) th {
+        border-bottom: none;
+    }
+
+
+    @media screen and (min-width: 768px) {
+       body {
+        background-color: hsl(330, 100%, 98%);
+       }
+
+        .container {
+          padding: 5rem 15rem;
+        }
+
+        .recipe__page {
+          border-radius: 1rem;
+          padding: 2rem;
+        }
+
+        .recipe-image {
+          border-radius: 1rem;
+        }
+
+        
+    }
